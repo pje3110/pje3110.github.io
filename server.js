@@ -15,19 +15,22 @@ router.get("/bio", function (req, res) {
     res.sendFile(__dirname + "/bio.html");
 });
 router.get("/entscheidung", function (req, res) {
-    res.sendFile(__dirname + "/decision.html");
+    res.sendFile(__dirname + "/entscheidung.html");
 });
 router.get("/reisen", function (req, res) {
-    res.sendFile(__dirname + "/travel.html");
+    res.sendFile(__dirname + "/reisen.html");
 });
 router.get("/interessen", function (req, res) {
-    res.sendFile(__dirname + "/interests.html");
+    res.sendFile(__dirname + "/interessen.html");
 });
 router.get("/features", function (req, res) {
     res.sendFile(__dirname + "/features.html");
 });
 router.get("/impressum", function (req, res) {
     res.sendFile(__dirname + "/impressum.html");
+});
+router.get("/satanismus", function (req, res) {
+    res.sendFile(__dirname + "/satanismus.html");
 });
 var Person = /** @class */ (function () {
     function Person(fn, ln, ma, ro, pw) {

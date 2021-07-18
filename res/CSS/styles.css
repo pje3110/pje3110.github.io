@@ -32,6 +32,14 @@ footer{
     position: page;
     bottom: 1px;
 }
+.satan{
+    font-family: "Times New Roman", cursive;
+    background-color:darkred;
+    color: black;
+}
+.satanrules{
+    text-align:left;
+}
 hr {
     color: darkblue;
     border-width: 5px;
