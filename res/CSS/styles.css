@@ -1,0 +1,39 @@
+html {
+    background-color: lightskyblue;
+    text-align: center;
+}
+h1{
+
+}
+.navstyle{
+    background: lightskyblue;
+    color: white;
+}
+.navstyle:hover{
+    background: #adfff5;
+}
+.styleMode{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: deeppink;
+    background-color: lawngreen;
+}
+.normal{
+
+}
+body{
+    font-family: sans-serif;
+    color: whitesmoke;
+    background-color: deepskyblue;
+    text-align: center;
+    margin: 15px;
+    padding: 30px;
+}
+footer{
+    position: page;
+    bottom: 1px;
+}
+hr {
+    color: darkblue;
+    border-width: 5px;
+}
+
