@@ -17,13 +17,13 @@ router.get("/bio", (req: express.Request, res: express.Response) => {
     res.sendFile(__dirname + "/bio.html");
 });
 router.get("/entscheidung", (req: express.Request, res: express.Response) => {
-    res.sendFile(__dirname + "/decision.html");
+    res.sendFile(__dirname + "/entscheidung.html");
 });
 router.get("/reisen", (req: express.Request, res: express.Response) => {
-    res.sendFile(__dirname + "/travel.html");
+    res.sendFile(__dirname + "/reisen.html");
 });
 router.get("/interessen", (req: express.Request, res: express.Response) => {
-    res.sendFile(__dirname + "/interests.html");
+    res.sendFile(__dirname + "/interessen.html");
 });
 router.get("/features", (req: express.Request, res: express.Response) => {
     res.sendFile(__dirname + "/features.html");
