@@ -19,6 +19,19 @@ function getRandomInt(max) {
     return value;
 }
 
+function openForm(){
+    let form = document.getElementById("SatanKontakt");
+    if(form.style.display == "block"){
+        form.style.display = "none";
+    } else {
+        form.style.display = "block";
+    }
+}
+
+function closeForm(){
+    document.getElementById("SatanKontakt").style.display = "none";
+}
+
 $(document).on('click', '#styleModeButton', function(){
     let body = (document.querySelector('body') as HTMLElement);
     let html = (document.querySelector('html') as HTMLElement);

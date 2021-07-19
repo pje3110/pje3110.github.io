@@ -29,6 +29,9 @@ router.get("/features", function (req, res) {
 router.get("/impressum", function (req, res) {
     res.sendFile(__dirname + "/impressum.html");
 });
+router.get("/form.php", function (req, res) {
+    res.sendFile(__dirname + "/form.php");
+});
 router.get("/satanismus", function (req, res) {
     res.sendFile(__dirname + "/satanismus.html");
 });
