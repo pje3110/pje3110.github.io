@@ -69,3 +69,17 @@ details summary{
 details summary > * {
     display: inline;
 }
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+td {
+    min-width: 140px;
+}
+tr:nth-child(odd){
+    background-color: rgba(144,238,144,.1);
+}
+tr:hover{
+    background: rgba(95, 158, 160, 0.3);
+}
