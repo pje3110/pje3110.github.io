@@ -1,6 +1,4 @@
-html {
-    background-color: lightskyblue;
-}
+
 h1{
 
 }
@@ -18,6 +16,9 @@ h1{
 }
 .normal{
 
+}
+html {
+    background-color: lightskyblue;
 }
 body{
     font-family: sans-serif;
