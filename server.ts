@@ -31,9 +31,6 @@ router.get("/features", (req: express.Request, res: express.Response) => {
 router.get("/impressum", (req: express.Request, res: express.Response) => {
     res.sendFile(__dirname + "/impressum.html");
 });
-router.get("/form.php", (req: express.Request, res: express.Response) => {
-    res.sendFile(__dirname + "/form.php");
-});
 router.get("/satanismus", (req: express.Request, res: express.Response) => {
     res.sendFile(__dirname + "/satanismus.html");
 });

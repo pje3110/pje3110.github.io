@@ -121,14 +121,14 @@ background-color:darkred;color: black;">
     </div>
 
     <div class="row">
-        <div class="form-popup" id="SatanKontakt">
-            <form class="form-container" method="post" action="form.php">
+        <div class="form-popup" id="SatanKontakt" style="display: none; border: 3px solid black; background-color: darkred; max-width: 300px; position: center; margin: 0 auto;">
+            <form class="form-container" method="POST" action="https://formspree.io/f/mpzkjooe" style="padding: 10px;">
                 <h1>Kontakt</h1>
-                <label for="name"><b>Name</b></label>
-                <input type="text" placeholder="Vorname Nachname" name="name" id="name" required>
+                <label for="_replyto"><b>E-Mail</b></label>
+                <input type="email" placeholder="E-Mail" name="_replyto" id="_replyto" required style="padding: 5px; margin: 5px 0 22px 0; border: black; background: lightgrey; width: 100%;">
                 <br>
-                <label for="email"><b>E-Mail</b></label>
-                <input type="text" placeholder="E-Mail" name="email" id="email" required>
+                <label for="message"><b>Name</b></label>
+                <textarea placeholder="Vorname Nachname" name="message" id="message" required style="padding: 5px; margin: 5px 0 22px 0; border: black; background: lightgrey; width: 100%;"></textarea>
                 <br>
                 <button type="submit" class="btn btn-danger">An Satan senden</button>
                 <button type="button" class="btn btn-warning" onclick="closeForm()">Schließen</button>

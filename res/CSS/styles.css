@@ -83,26 +83,6 @@ tr:nth-child(odd){
 tr:hover{
     background: rgba(95, 158, 160, 0.3);
 }
-
-.form-popup{
-    display:none;
-    border: 3px solid black;
-    background-color: darkred;
-    max-width: 300px;
-    position: center;
-    margin: 0 auto;
-
-}
-.form-container{
-    padding: 10px;
-}
-.form-container input[type=text]{
-    padding: 5px;
-    margin: 5px 0 22px 0;
-    border: black;
-    background: lightgrey;
-    width: 100%;
-}
 .form-container input[type=text]:focus{
     background-color: #ddd;
     outline: none;
