@@ -40,4 +40,9 @@ hr {
     color: darkblue;
     border-width: 5px;
 }
-
+details summary{
+    cursor: pointer;
+}
+details summary > * {
+    display: inline;
+}
