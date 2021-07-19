@@ -30,3 +30,17 @@ $(document).on('click', '#styleModeButton', function () {
         styleBool = true;
     }
 });
+$(document).on('click', '#styleModeButtonSatan', function () {
+    var body = document.querySelector('body');
+    var html = document.querySelector('html');
+    if (styleBool) {
+        html.style.cssText = 'background-color:darkred; text-align:center;';
+        body.style.cssText = 'font-family:\'Times New Roman\', cursive;color: black;background-color: darkred;text-align: center;margin: 15px;padding: 30px;';
+        styleBool = false;
+    }
+    else {
+        html.style.cssText = 'background-color:lightgreen; text-align:center;';
+        body.style.cssText = 'font-family: "Comic Sans MS", cursive, sans-serif;color: deeppink;background-color: lawngreen;text-align: center;margin: 15px;padding: 30px;';
+        styleBool = true;
+    }
+});

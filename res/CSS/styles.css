@@ -1,6 +1,5 @@
 html {
     background-color: lightskyblue;
-    text-align: center;
 }
 h1{
 
@@ -33,12 +32,36 @@ footer{
     bottom: 1px;
 }
 
-li{
-   text-align: left;
+ul li{
+    float: left;
+}
+ol li{
+    text-align: left;
+}
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: #111;
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 hr {
     color: darkblue;
     border-width: 5px;
+}
+.active {
+    background-color:#111111;
 }
 details summary{
     cursor: pointer;
