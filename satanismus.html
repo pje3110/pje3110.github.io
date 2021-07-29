@@ -2,13 +2,13 @@
 <!--<html lang="de" style="font-family:'Times New Roman', cursive;
 background-color:darkred;color: black;">
 -->
-<html lang="de" style="background-color: #333">
+<html lang="de">
 <head>
 
     <meta charset="UTF-8">
     <link rel="stylesheet" href="res/CSS/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="res/CSS/styles.css">
-    <link rel="icon" href="res/IMG/satanicon.PNG">
+    <link rel="stylesheet" type="text/css" href="res/CSS/stylessatanismus.css">
+    <link rel="icon" href="res/IMG/satanicon.png">
     <script src="res/TS/jquery-3.4.1.js"></script>
     <script src="res/TS/functions.js"></script>
 
@@ -20,9 +20,7 @@ background-color:darkred;color: black;">
 <body style="font-family:'Papyrus', cursive;
 background-color:darkred;color: black;">
 -->
-<body style="background-image: url('res/IMG/fog.gif'); background-position: center; background-repeat: no-repeat; background-size: cover; background-color: #002752ff; font-family: Papyrus, cursive; color: lightgrey;
-">
-
+<body>
     <div class="row">
         <div class="col-md-12">
             <ul>
@@ -158,6 +156,25 @@ background-color:darkred;color: black;">
         </div>
     </div>
 
+    <div class="bg-modal">
+        <div class="modal-content">
+            <div class="form-popup" id="SatanKontakt">
+                <form class="form-container" method="POST" action="https://formspree.io/f/mpzkjooe">
+                    <h1>Kontakt</h1>
+                    <label for="_replyto"><b>E-Mail</b></label>
+                    <input type="email" placeholder="E-Mail" name="_replyto" id="_replyto" required>
+                    <label for="message"><b>Name</b></label>
+                    <textarea placeholder="Vorname Nachname" name="message" id="message" required></textarea>
+                    <br>
+                    <button type="submit" class="btn btn-danger">An Satan senden</button>
+                    <button type="button" class="btn btn-warning" onclick="closeForm()">Schließen</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--
+
     <div class="row">
         <div class="form-popup" id="SatanKontakt" style="display: none; border: 3px solid black; background-color: #333; max-width: 300px; position: center; margin: 0 auto;">
             <form class="form-container" method="POST" action="https://formspree.io/f/mpzkjooe" style="padding: 10px;">
@@ -173,6 +190,7 @@ background-color:darkred;color: black;">
             </form>
         </div>
     </div>
+    -->
 
 </body>
 
@@ -183,4 +201,5 @@ background-color:darkred;color: black;">
             <a style="color:grey" href="/impressum"><p>Impressum</p></a>
         </div>
 </footer>
+
 </html>

@@ -20,16 +20,25 @@ function getRandomInt(max) {
 }
 
 function openForm(){
+    let form = document.querySelector('.bg-modal') as HTMLElement;
+    if(form.style.display == 'flex'){
+        form.style.display = 'none';
+    } else {
+        form.style.display = 'flex';
+    }
+    /*
     let form = document.getElementById("SatanKontakt");
     if(form.style.display == "block"){
         form.style.display = "none";
     } else {
         form.style.display = "block";
-    }
+    }*/
 }
 
 function closeForm(){
-    document.getElementById("SatanKontakt").style.display = "none";
+    let form = document.querySelector(".bg-modal") as HTMLElement;
+    form.style.display = 'none';
+    //document.getElementById("SatanKontakt").style.display = "none";
 }
 
 $(document).on('click', '#styleModeButton', function(){
@@ -55,8 +64,12 @@ $(document).on('click', '#styleModeButtonSatan', function(){
         body.style.cssText = 'font-family:\'Times New Roman\', cursive;color: black;background-color: darkred;text-align: center;margin: 15px;padding: 30px;';
         styleBool = false;
     } else {
+        html.style.cssText = 'background-color: black; text-align:center;';
+        body.style.cssText = 'font-family: "Comic Sans MS", cursive, sans-serif; color: deeppink;';
+        /*
         html.style.cssText = 'background-color:lightgreen; text-align:center;';
         body.style.cssText = 'font-family: "Comic Sans MS", cursive, sans-serif;color: deeppink;background-color: lawngreen;text-align: center;margin: 15px;padding: 30px;';
+        */
         styleBool = true;
     }
 });
