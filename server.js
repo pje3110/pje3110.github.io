@@ -1,39 +1,62 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var express = require("express");
-var router = express();
+const express = __importStar(require("express"));
+const router = express();
 router.listen(8080);
 router.use(express.urlencoded({ extended: false }));
 router.use(express.json());
 router.use("/res", express.static(__dirname + "/res"));
-router.get("/", function (req, res) {
+router.get("/", (req, res) => {
     res.status(200);
     res.sendFile(__dirname + "/index.html");
 });
 //---------------------------------------------------------------------------------------
-router.get("/bio", function (req, res) {
+router.get("/bio", (req, res) => {
     res.sendFile(__dirname + "/bio.html");
 });
-router.get("/entscheidung", function (req, res) {
+router.get("/entscheidung", (req, res) => {
     res.sendFile(__dirname + "/entscheidung.html");
 });
-router.get("/reisen", function (req, res) {
+router.get("/reisen", (req, res) => {
     res.sendFile(__dirname + "/reisen.html");
 });
-router.get("/interessen", function (req, res) {
+router.get("/interessen", (req, res) => {
     res.sendFile(__dirname + "/interessen.html");
 });
-router.get("/features", function (req, res) {
+router.get("/features", (req, res) => {
     res.sendFile(__dirname + "/features.html");
 });
-router.get("/impressum", function (req, res) {
+router.get("/impressum", (req, res) => {
     res.sendFile(__dirname + "/impressum.html");
 });
-router.get("/satanismus", function (req, res) {
+router.get("/satanismus", (req, res) => {
     res.sendFile(__dirname + "/satanismus.html");
 });
-var Person = /** @class */ (function () {
-    function Person(fn, ln, ma, ro, pw) {
+class Person {
+    constructor(fn, ln, ma, ro, pw) {
         this.firstname = fn;
         this.lastname = ln;
         this.mail = ma;
@@ -41,45 +64,44 @@ var Person = /** @class */ (function () {
         this.password = pw;
         this.userID = ++Person.maxID;
     }
-    Person.prototype.displayName = function () {
+    displayName() {
         return this.firstname + " " + this.lastname;
-    };
-    Person.prototype.displayUserID = function () {
+    }
+    displayUserID() {
         return this.userID;
-    };
-    Person.prototype.displayMail = function () {
+    }
+    displayMail() {
         return this.mail;
-    };
-    Person.prototype.displayPassword = function () {
+    }
+    displayPassword() {
         return this.password;
-    };
-    Person.prototype.displayRole = function () {
+    }
+    displayRole() {
         return this.role;
-    };
-    Person.maxID = 0;
-    return Person;
-}());
-var group = [];
-var selectgroup;
-var whicharr = "group";
+    }
+}
+Person.maxID = 0;
+let group = [];
+let selectgroup;
+let whicharr = "group";
 //Benutzer erstellen
-router.post("/create", function (req, res) {
-    var firstname = req.body.firstname;
-    var lastname = req.body.lastname;
-    var email = req.body.email;
-    var role = req.body.role;
-    var password = req.body.password;
-    var person1 = new Person(firstname, lastname, email, role, password);
+router.post("/create", (req, res) => {
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const email = req.body.email;
+    const role = req.body.role;
+    const password = req.body.password;
+    let person1 = new Person(firstname, lastname, email, role, password);
     group.push(person1);
     whicharr = "group";
     res.status(200);
     res.json({
-        firstname: firstname,
+        firstname,
     });
 });
 //Benutzer auswählen
-router.get("/select", function (req, res) {
-    var selection = req.query.selection;
+router.get("/select", (req, res) => {
+    const selection = req.query.selection;
     res.status(200);
     res.json({
         userid: group[selection - 1].displayUserID().toString(),
@@ -91,12 +113,12 @@ router.get("/select", function (req, res) {
     });
 });
 //Benutzer editieren
-router.post("/edit", function (req, res) {
-    var selection = req.body.selection;
-    var firstname = req.body.firstname;
-    var lastname = req.body.lastname;
-    var email = req.body.email;
-    var role = req.body.role;
+router.post("/edit", (req, res) => {
+    const selection = req.body.selection;
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const email = req.body.email;
+    const role = req.body.role;
     group[selection - 1].firstname = firstname;
     group[selection - 1].lastname = lastname;
     group[selection - 1].mail = email;
@@ -104,27 +126,27 @@ router.post("/edit", function (req, res) {
     whicharr = "group";
     res.status(200);
     res.json({
-        firstname: firstname,
+        firstname,
     });
 });
 //Benutzer löschen
-router.get("/delete", function (req, res) {
-    var selection = req.query.selection;
+router.get("/delete", (req, res) => {
+    const selection = req.query.selection;
     group.splice(selection - 1, 1);
     whicharr = "group";
     res.status(200);
     res.json({
-        selection: selection,
+        selection,
     });
 });
 //Tabelle erstellen
-router.get("/tablevalue", function (req, res) {
-    var temp = req.query.temp;
-    var userID;
-    var name;
-    var mail;
-    var password;
-    var role;
+router.get("/tablevalue", (req, res) => {
+    let temp = req.query.temp;
+    let userID;
+    let name;
+    let mail;
+    let password;
+    let role;
     if (whicharr == "select") {
         if (temp <= selectgroup.length) {
             userID = selectgroup[temp - 1].displayUserID();
@@ -154,22 +176,22 @@ router.get("/tablevalue", function (req, res) {
     } */
     res.status(200);
     res.json({
-        userID: userID,
-        name: name,
-        mail: mail,
-        password: password,
-        role: role,
+        userID,
+        name,
+        mail,
+        password,
+        role,
     });
 });
 //Soriterte Auswahl
-router.post("/sortedSelect", function (req, res) {
-    var firstname = req.body.firstname;
-    var lastname = req.body.lastname;
-    var role = req.body.role;
-    var table1 = req.body.table1;
-    var temp1 = 0;
+router.post("/sortedSelect", (req, res) => {
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const role = req.body.role;
+    const table1 = req.body.table1;
+    let temp1 = 0;
     selectgroup = [];
-    for (var i = 0; i < group.length; i++) { //Zeile
+    for (let i = 0; i < group.length; i++) { //Zeile
         if (group[i].firstname.includes(firstname) && firstname != "") {
             selectgroup.push(group[i]);
         }
@@ -183,12 +205,12 @@ router.post("/sortedSelect", function (req, res) {
     whicharr = "select";
     res.status(200);
     res.json({
-        firstname: firstname,
+        firstname,
     });
 });
 //Sortierung
-router.get("/sort", function (req, res) {
-    var selection = req.query.selection;
+router.get("/sort", (req, res) => {
+    const selection = req.query.selection;
     //let sortgroup = group.slice();
     if (selection == 2) {
         group.sort(function (a, b) {
@@ -200,7 +222,7 @@ router.get("/sort", function (req, res) {
         });
     }
     else if (selection == 3) {
-        group.sort(function (a, b) { return (a.lastname > b.lastname) ? 1 : -1; });
+        group.sort((a, b) => (a.lastname > b.lastname) ? 1 : -1);
         /*
         sortgroup.sort(function (a, b) {
             if (a.lastname < b.lastname) return -1;
@@ -229,11 +251,11 @@ router.get("/sort", function (req, res) {
     //whicharr = "sort";
     res.status(200);
     res.json({
-        selection: selection,
+        selection,
     });
 });
 //keine Regel passt
-router.use(function (req, res) {
+router.use((req, res) => {
     res.status(404);
     res.send('<br> <p> Die aufzurufende Seite steht nicht zur Verfügung</p>');
 });

@@ -4,6 +4,7 @@
 .idea/modules.xml
 .idea/Website.iml
 .idea/workspace.xml
+node_modules/
 node_modules/.bin/mime
 node_modules/.bin/mime.cmd
 node_modules/@types/jquery/dist/jquery.slim.d.ts
@@ -399,3 +400,4 @@ node_modules/content-type/index.js
 node_modules/content-type/HISTORY.md
 .idea/vcs.xml
 res/IMG/2018-06-17-1-dreut-Weidigschule-Abi-18-017.jpg
+tsconfig.json
