@@ -37,6 +37,9 @@ router.get("/satanismus", (req: express.Request, res: express.Response) => {
 router.get("/wichteln", (req: express.Request, res: express.Response) => {
     res.sendFile(__dirname + "/wichteln.html");
 });
+router.get("/geburtstag", (req: express.Request, res: express.Response) => {
+    res.sendFile(__dirname + "/geburtstag.html");
+});
 
 class Person {
     public firstname: string;
