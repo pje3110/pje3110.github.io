@@ -4,7 +4,7 @@
 .idea/modules.xml
 .idea/Website.iml
 .idea/workspace.xml
-node_modules
+node_modules/
 .idea/vcs.xml
 res/IMG/2018-06-17-1-dreut-Weidigschule-Abi-18-017.jpg
 tsconfig.json
