@@ -1,5 +1,5 @@
 .navstyle{
-    background: lightskyblue;
+    background: #000e29;
     color: white;
 }
 .navstyle:hover{
@@ -14,15 +14,15 @@
 
 }
 html {
-    background-color: lightskyblue;
+    background-color:#000e29;
 }
 body{
     font-family: sans-serif;
     color: whitesmoke;
-    background-color: deepskyblue;
-    text-align: center;
+    background-color: #1b2841;
+    text-align: left;
     margin: 15px;
-    padding: 30px;
+    padding: 50px;
 }
 footer{
     position: page;
