@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="res/CSS/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="res/CSS/styles.css">
+        <link rel="icon" href="res/IMG/picwebsite4.PNG">
+        <script src="res/TS/jquery-3.4.1.js"></script>
+        <script src="res/TS/functions.js"></script>
+
+
+        <title>Entscheidungsfinder</title>
+
+    </head>
+
+    <body>
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul>
+                <li><a href="/">Start</a></li>
+                <li><a href="/bio">Biografie</a></li>
+                <li><a href="/interessen">Interessen</a></li>
+                <li><a class="active" href="/entscheidung">Entscheidung</a></li>
+                <li style="margin-left: 20px"><h1>Philipps famose Website</h1></li>
+                <li style="float:right; cursor:pointer"><a id="styleModeButton">StyleMode</a></li>
+                <!--<li style="float:right"><a href="/features"> Dings</a></li>-->
+            </ul>
+            <hr>
+        </div>
+    </div>
+
+        <div class="cold-md-2">
+            <label id="label1"></label>
+            Entscheidung: <br>
+            <label id="decision"></label>
+            <hr>
+            <button type="button" class="btn btn-dark" style="font-size:30px" onclick="randomDecision()">Entscheide!</button>
+        </div>
+
+    </body>
+
+    <footer>
+        <div class="col-md-12">
+            <hr>
+            <p> ©2021, ich</p>
+            <a href="/impressum"><p>Impressum</p></a>
+        </div>
+    </footer>
+</html>
