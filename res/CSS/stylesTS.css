@@ -21,8 +21,8 @@ body{
     color: whitesmoke;
     background-color: #1b2841;
     text-align: left;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
     margin-top: 15px;
     padding: 15px;
 }
@@ -85,4 +85,7 @@ tr:hover{
 .form-container input[type=text]:focus{
     background-color: #ddd;
     outline: none;
+}
+a{
+    color: white;
 }
