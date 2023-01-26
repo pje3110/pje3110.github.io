@@ -5,14 +5,7 @@
 .navstyle:hover{
     background: #adfff5;
 }
-.styleMode{
-    font-family: "Comic Sans MS", cursive, sans-serif;
-    color: deeppink;
-    background-color: lawngreen;
-}
-.normal{
 
-}
 html {
     background-color:#000e29;
 }
@@ -29,6 +22,7 @@ body{
 footer{
     position: page;
     bottom: 1px;
+    color: grey;
 }
 
 ul li{
@@ -56,8 +50,8 @@ ul{
     background-color: #333;
 }
 hr {
-    color: darkblue;
-    border-width: 5px;
+    border-color: grey;
+    border-width: 2px;
 }
 .active {
     background-color:#111111;
